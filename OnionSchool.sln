@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Persistence", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.WebApi", "src\WebApi\SchoolApp.WebApi\SchoolApp.WebApi.csproj", "{EE31C91C-20B1-42FC-AE79-97966D3EE02A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Application", "src\Core\SchoolApp.Application\SchoolApp.Application.csproj", "{79C78FF8-A3F9-4FD3-A7E3-0C80F185EDD1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Application", "src\Core\SchoolApp.Application\SchoolApp.Application.csproj", "{79C78FF8-A3F9-4FD3-A7E3-0C80F185EDD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.Domain", "src\Core\SchoolApp.Domain\SchoolApp.Domain.csproj", "{7C69420C-738F-4391-B08D-E0760C964829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolApp.Domain", "src\Core\SchoolApp.Domain\SchoolApp.Domain.csproj", "{7C69420C-738F-4391-B08D-E0760C964829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolApp.UI", "src\WebApi\SchoolApp.UI\SchoolApp.UI.csproj", "{D7D22179-D9EB-4268-BCA8-710D3025574E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{7C69420C-738F-4391-B08D-E0760C964829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C69420C-738F-4391-B08D-E0760C964829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C69420C-738F-4391-B08D-E0760C964829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D22179-D9EB-4268-BCA8-710D3025574E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D22179-D9EB-4268-BCA8-710D3025574E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D22179-D9EB-4268-BCA8-710D3025574E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D22179-D9EB-4268-BCA8-710D3025574E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{EE31C91C-20B1-42FC-AE79-97966D3EE02A} = {78E2934D-597C-43FF-BB47-337EEB5B9A9E}
 		{79C78FF8-A3F9-4FD3-A7E3-0C80F185EDD1} = {59D585C6-DFA2-47FB-9729-EE8B385EEA21}
 		{7C69420C-738F-4391-B08D-E0760C964829} = {59D585C6-DFA2-47FB-9729-EE8B385EEA21}
+		{D7D22179-D9EB-4268-BCA8-710D3025574E} = {78E2934D-597C-43FF-BB47-337EEB5B9A9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {015AB514-8441-427C-A124-0E1BC757EBDA}
