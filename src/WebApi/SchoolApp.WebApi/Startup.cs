@@ -34,11 +34,11 @@ namespace SchoolApp.WebApi
             services.AddApplicationServices(); //Core
             services.AddPersistenceServices(); //Infrastructure
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SchoolApp.WebApi", Version = "v1" });
-            });
+            #region Blazor
+            services.AddControllersWithViews();
+            services.AddRazorPages();
+            #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,19 +47,21 @@ namespace SchoolApp.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SchoolApp.WebApi v1"));
+                app.UseWebAssemblyDebugging(); //Blazor
             }
 
             app.UseHttpsRedirection();
-
+            app.UseBlazorFrameworkFiles(); 
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapRazorPages(); //Blazor
                 endpoints.MapControllers();
+                endpoints.MapFallbackToFile("index.html"); //Blazor
             });
         }
     }
