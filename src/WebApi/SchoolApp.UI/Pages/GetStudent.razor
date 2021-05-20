@@ -1,0 +1,42 @@
+﻿@page "/students"
+@inject HttpClient Http
+
+<h2>Students</h2>
+
+@if (students == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date Of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in students.Value)
+            {
+                <tr>
+                    <td>@student.Id</td>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.DateOfBirth</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private ServiceResponse<List<StudentViewDto>> students;
+
+    protected override async Task OnInitializedAsync()
+    {
+        students = await Http.GetFromJsonAsync<ServiceResponse<List<StudentViewDto>>>("api/student");
+    }
+}
